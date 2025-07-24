@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: noodles-redis
+  name: noodles-postgres
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: noodles
+  project: postgres
   source:
-    chart: redis
-    repoURL: oci://registry-1.docker.io/bitnamicharts/redis
-    targetRevision: "21.2.13"  # Use latest stable version
+    chart: postgresql
+    repoURL: oci://registry-1.docker.io/bitnamicharts/postgresql
+    targetRevision: "16.7.21"  # Use latest stable version
     helm:
-      releaseName: noodles-redis
+      releaseName: noodles-postgres
       # values: |
   
   destination:
