@@ -1,0 +1,2 @@
+resources:
+  - argocd-enable-bitnami-oci-helm-repo.yaml

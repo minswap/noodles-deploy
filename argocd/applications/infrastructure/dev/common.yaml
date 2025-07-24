@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: common
+  namespace: argocd
+spec:
+  project: noodles
+  source:
+    repoURL: 'https://github.com/minswap/noodles-deploy.git'
+    targetRevision: HEAD
+    path: infrastructure/common/overlays/dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: noodles-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
