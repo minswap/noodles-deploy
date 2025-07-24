@@ -6,7 +6,7 @@ set -o pipefail
 NAMESPACE="argocd"
 # VERSION=v2.14.15
 ARGOCD_PATH="infrastructure/argocd"
-ROOT_APP_PATH="argocd/bootstrap/noodles-root-app.yaml"
+ROOT_APP_PATH="argocd/bootstrap/noodles-core-app.yaml"
 
 echo "Creating namespace: $NAMESPACE"
 kubectl create namespace $NAMESPACE || echo "Namespace $NAMESPACE already exists"
@@ -21,7 +21,7 @@ echo "Retrieving ArgoCD initial admin password..."
 kubectl -n $NAMESPACE get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 echo -e "\nUse the above password to log in to ArgoCD."
 
-echo "Applying root-app.yaml to let ArgoCD manage itself..."
+echo "Applying noodles-core-app.yaml to let ArgoCD manage itself..."
 kubectl apply -f $ROOT_APP_PATH -n $NAMESPACE
 
 echo "Bootstrap complete! Access ArgoCD UI:"

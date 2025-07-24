@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: noodles-root-app
+  name: noodles-core-app
   namespace: argocd
 spec:
   project: default
@@ -22,7 +22,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: noodles-root-app-projects
+  name: noodles-core-app-projects
   namespace: argocd
 spec:
   project: default
