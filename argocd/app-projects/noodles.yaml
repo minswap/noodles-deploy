@@ -7,6 +7,7 @@ spec:
   description: Noodles App Project
   sourceRepos:
     - https://github.com/minswap/noodles-deploy.git
+    - https://prometheus-community.github.io/helm-charts
   destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc 
