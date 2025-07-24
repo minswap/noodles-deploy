@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: noodles-redis
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: noodles
+  source:
+    chart: redis
+    repoURL: oci://registry-1.docker.io/bitnamicharts/redis
+    targetRevision: "75.6.1"  # Use latest stable version
+    helm:
+      releaseName: noodles-redis
+      # values: |
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: noodles-prod
+  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

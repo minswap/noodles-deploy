@@ -5,7 +5,7 @@ metadata:
   name: prometheus-grafana-stack
   namespace: argocd
 spec:
-  project: default
+  project: noodles
   source:
     repoURL: 'https://github.com/minswap/noodles-deploy.git'
     targetRevision: HEAD

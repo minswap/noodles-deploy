@@ -2,16 +2,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rabbitmq
+  name: redis
+  namespace: argocd
 spec:
-  project: default
+  project: noodles
   source:
     repoURL: 'https://github.com/minswap/noodles-deploy.git'
     targetRevision: HEAD
-    path: infrastructure/message-brokers/rabbitmq/overlays/dev
+    path: infrastructure/cache/redis/overlays/dev
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: rabbitmq
+    namespace: noodles-prod
   syncPolicy:
     automated:
       prune: true
