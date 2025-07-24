@@ -9,7 +9,7 @@ spec:
   project: noodles
   source:
     chart: redis
-    repoURL: oci://registry-1.docker.io/bitnamicharts/redis
+    repoURL: oci://registry-1.docker.io/bitnamicharts
     targetRevision: "21.2.13"  # Use latest stable version
     helm:
       releaseName: noodles-redis
