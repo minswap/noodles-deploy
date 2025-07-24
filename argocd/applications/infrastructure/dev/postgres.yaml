@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/minswap/noodles-deploy.git'
+    repoURL: 'git@github.com:minswap/noodles-deploy.git'
     targetRevision: HEAD
     path: infrastructure/databases/postgres/overlays/dev
   destination:

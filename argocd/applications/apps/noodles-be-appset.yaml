@@ -16,7 +16,7 @@ spec:
     spec:
       project: noodles
       source:
-        repoURL: 'https://github.com/minswap/noodles-deploy.git'
+        repoURL: 'git@github.com:minswap/noodles-deploy.git'
         targetRevision: main
         path: 'apps/noodles-be/overlays/{{cluster}}'
       destination:

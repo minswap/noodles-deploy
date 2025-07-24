@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Noodles App Project
   sourceRepos:
-    - https://github.com/minswap/noodles-deploy.git
+    - git@github.com:minswap/noodles-deploy.git
   destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc 

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/minswap/noodles-deploy.git'
+    repoURL: 'git@github.com:minswap/noodles-deploy.git'
     targetRevision: main
     path: argocd/applications
     directory:
@@ -27,7 +27,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/minswap/noodles-deploy.git'
+    repoURL: 'git@github.com:minswap/noodles-deploy.git'
     targetRevision: main
     path: argocd/app-projects
     directory:
