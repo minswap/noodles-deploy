@@ -1,2 +1,2 @@
 resources:
-  - noodles-redis-app.yaml
+  - redis-app.yaml
