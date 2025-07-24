@@ -1,0 +1,17 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: AppProject
+# metadata:
+#   name: noodles-prod
+#   namespace: argocd
+# spec:
+#   description: Noodles Prod App Project
+#   sourceRepos:
+#     - https://github.com/minswap/noodles-deploy.git
+#     - https://prometheus-community.github.io/helm-charts
+#     - registry-1.docker.io/bitnamicharts
+#   destinations:
+#     - namespace: '*'
+#       server: https://kubernetes.default.svc 
+#   clusterResourceWhitelist:
+#     - group: '*'
+#       kind: '*'

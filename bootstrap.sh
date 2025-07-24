@@ -6,7 +6,7 @@ set -o pipefail
 NAMESPACE="argocd"
 # VERSION=v2.14.15
 ARGOCD_PATH="infrastructure/argocd"
-ROOT_APP_PATH="argocd/bootstrap/noodles-core-app.yaml"
+ROOT_APP_PATH="argocd/bootstrap/noodles-prod-core-app.yaml"
 
 echo "Creating namespace: $NAMESPACE"
 kubectl create namespace $NAMESPACE || echo "Namespace $NAMESPACE already exists"
