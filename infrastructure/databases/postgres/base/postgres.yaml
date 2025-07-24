@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: postgres
+  project: noodles
   source:
     chart: postgresql
     repoURL: oci://registry-1.docker.io/bitnamicharts/postgresql
