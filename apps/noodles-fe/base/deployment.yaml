@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noodles-fe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: noodles-fe
+  template:
+    metadata:
+      labels:
+        app: noodles-fe
+    spec:
+      containers:
+        - name: noodles-fe
+          image: minswap/noodles-fe:latest
+          ports:
+            - containerPort: 80

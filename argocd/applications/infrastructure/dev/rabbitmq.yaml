@@ -1,0 +1,18 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rabbitmq
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/minswap/noodles-deploy.git'
+    targetRevision: HEAD
+    path: infrastructure/message-brokers/rabbitmq/overlays/dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: rabbitmq
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
