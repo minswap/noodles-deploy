@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: noodles
+  project: noodles-prod
   source:
     chart: redis
     repoURL: registry-1.docker.io/bitnamicharts

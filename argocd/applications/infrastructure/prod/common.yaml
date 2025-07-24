@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: redis
+  name: common
   namespace: argocd
 spec:
-  project: noodles
+  project: noodles-prod
   source:
     repoURL: 'https://github.com/minswap/noodles-deploy.git'
     targetRevision: HEAD
-    path: infrastructure/cache/redis/overlays/dev
+    path: infrastructure/common
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: noodles-prod

@@ -1,14 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: noodles
+  name: noodles-project
   namespace: argocd
 spec:
   description: Noodles App Project
   sourceRepos:
     - https://github.com/minswap/noodles-deploy.git
     - https://prometheus-community.github.io/helm-charts
-    # - oci://registry-1.docker.io/bitnamicharts
     - registry-1.docker.io/bitnamicharts
   destinations:
     - namespace: '*'

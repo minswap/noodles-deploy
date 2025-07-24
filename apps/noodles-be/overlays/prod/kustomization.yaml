@@ -2,11 +2,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../base
-namespace: noodles-prod
-# ArgoCD Image Updater annotations for noodles-be:
-# argocd-image-updater.argoproj.io/image-list: noodles-be=minswap/noodles-be:latest
-# argocd-image-updater.argoproj.io/noodles-be.update-strategy: latest
-# argocd-image-updater.argoproj.io/noodles-be.force-update: "true"
-# argocd-image-updater.argoproj.io/write-back-method: git
-# argocd-image-updater.argoproj.io/git-branch: auto-image-update
-# argocd-image-updater.argoproj.io/pr-create: "true"

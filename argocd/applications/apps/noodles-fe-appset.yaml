@@ -24,7 +24,7 @@ spec:
     metadata:
       name: '{{cluster}}-noodles-fe'
     spec:
-      project: noodles
+      project: noodles-prod
       source:
         repoURL: 'https://github.com/minswap/noodles-deploy.git'
         targetRevision: main
